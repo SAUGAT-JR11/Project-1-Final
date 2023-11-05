@@ -1,0 +1,414 @@
+
+
+/* Add more styles as needed */
+
+:root{
+    --primary:#0077b6;
+    --secondary:#48cae4;
+    --black:#333;
+    --white:#fff;
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+
+}
+
+html{
+    font-size: 80%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+ html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+} 
+
+ html::-webkit-scrollbar-thumb{
+    background: var(--primary);
+    border-radius: .5rem;
+}  
+
+section{
+    padding: 5rem 7%;
+}
+
+.heading{
+    font-size: 4rem;
+    color: var(--primary);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-bottom: 3rem;
+}
+
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    background: var(--primary);
+    border-radius: .5rem;
+    color: var(--white);
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+background: var(--secondary);
+}
+
+/* header */
+.header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+}
+.header .logo i{
+    color: var(--primary);
+    padding-right: .5rem;
+}
+.header .navbar a{
+    font-size: 1.7rem;
+    color: var(--black);
+    margin: 0 1rem;
+} 
+
+.header .navbar a:hover{
+    color: var(--primary);
+}
+
+.header .navbar .btn{
+    margin-top: 0;
+    color: var(--white);
+}
+
+.header .navbar .btn:hover{
+    color: var(--white);
+}
+
+#menu-btn{
+    display: none;
+}
+    /* end */
+
+    /* home */
+
+    .home{
+        padding: 0;
+    }
+    .home .slide{
+        min-height: 100vh;
+        background-size: cover !important;
+        background-position: center !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+    }
+    .home .slide .content{
+        width: 80rem;
+        text-align: center;
+    }
+    .home .slide .content h3{
+        font-size: 4rem;
+        text-transform: uppercase;
+        color: var(--white);
+        line-height: 1.1;
+        padding: 2rem 0;
+    }
+/* end */
+
+/* availability */
+
+.availability form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background: #eee;
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.availability form .box{
+    flex: 1 1 17rem;
+}
+
+.availability form .box p{
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+.availability form .box .input{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--black);
+    margin: 1rem 0;
+    border-radius: .5rem;
+}
+
+/* end */
+
+/* about */
+
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6rem;
+}
+
+.about .row .image{
+    flex: 1 1 30rem;
+}
+
+.about .row .image img{
+    width:100%;
+}
+
+.about .row .content{
+    flex: 1 1 51rem;
+}
+
+.about .row .content h3{
+    font-size: 3.5rem;
+    color: var(--primary);
+    padding: 2rem 0;
+}
+
+.about .row .content p{
+    font-size: 1.2rem;
+    color: #666;
+    padding: 1rem 0;
+    line-height: 1.8;
+} 
+/* end */
+
+/* services */
+
+.services .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.services .box-container .box{
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    padding: 1rem;
+    text-align: center;
+}
+.services .box-container .box i{
+padding: 1rem;
+font-size: 5rem;
+color: skyblue;
+}
+.services .box-container .box h3{
+    font-size: 2.5em;
+    color: #333;
+}
+.services .box-container .box:hover{
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+/* end */
+
+/* rooms */
+  /* .room .slide{
+    background: var(--white);
+    border: .1rem solid rgba(0, 0, 0, 0.2);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 4rem;
+}
+.room .slide .image{
+    height: 25rem;
+    width: 100%;
+    padding: 1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+.room .slide .image img{
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+.room .slide .image .price{
+    position: absolute;
+    top: 2.5rem; left: 2.5rem;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 1.7rem;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    text-transform: lowercase;
+}
+
+.room .slide .content{
+    padding: 2rem;
+    padding-top: 0;
+}
+.room .slide .content h3{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+.room .slide .content p{
+    font-size: 1.6rem;
+    color: #666;
+    padding: .5rem 0;
+    line-height: 1.5;
+}   */
+
+.room {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.card-slider-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-slider {
+    display: flex;
+    max-width: 100%;
+    transition: transform 0.5s;
+}
+
+.card {
+    flex: 0 0 calc(33.33% - 15px);
+    padding: 15px;
+    background: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s;
+    margin-right: 15px;
+}
+
+.card:last-child {
+    margin-right: 0;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card .image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.card .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.card .price {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 1.7rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-transform: lowercase;
+}
+
+.card .content {
+    padding: 2rem;
+}
+
+.card .content h3 {
+    font-size: 1.8rem;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.card .content p {
+    font-size: 1.4rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.radio-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.radio-button {
+    display: none;
+}
+
+.radio-label {
+    width: 15px;
+    height: 15px;
+    background: var(--white);
+    border: 1px solid var(--primary);
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.radio-button:checked + .radio-label {
+    background: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    background: var(--primary);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.prev-button {
+    background: var(--primary);
+}
+
+.next-button {
+    background: var(--primary);
+}
+
+
+
+
+
+/* end */
